@@ -1,16 +1,18 @@
-# CIMS Mobile Interview Skills Test <!-- omit in toc -->
+# CIMS Mobile Developer Technical Assessment <!-- omit in toc -->
 
-We have come up with a few exercises to help our team get a feel for how you write code and solve problems.
-
-You will need to clone this repository locally, go over getting started instructions, and create a branch to work out of. For 15 minutes, you'll be able to check out what you need to complete, ask any questions you may have, and come up with a game plan. After that time, you'll get 30 minutes to complete as much of your assigned tasks as possible. If you start working before the first 15 minutes is up, we'll start the 30 minute timer; so make the most of your preparation time.
-
-Not finishing the exercise in 30 minutes will not result in a disqualification of any kind. Completion is nice, but we're more interested in how you work through the problem. With that in mind, we will be "looking over your shoulder" as you prepare and attempt to complete your selected exercise; expecting to hear your thoughts as you go.
-
-At the end, we'll have you create a pull request against the `main` branch so we can review it later.
+We’ve prepared a set of exercises to help us understand how you approach problem-solving and write code.
+ 
+You’ll start by cloning this repository locally, review the prerequisites needed to run this code, and create a working branch.
+ 
+You’ll have 15 minutes to explore the project, ask questions, and plan your approach. After that, you’ll have 30 minutes to work on the assigned tasks. If you begin coding before the initial 15 minutes ends, the 30-minute timer will begin at that point. Feel free to use the prep time strategically.
+ 
+You are not expected to finish everything within 30 minutes. While completion is great, we’re primarily interested in how you think, communicate, and work through problems. During the exercise, we’ll ask you to share your screen so we can observe your process, and we’d like you to think out loud as you work so we can better understand your reasoning and decision-making.
+ 
+At the end, please open a pull request against the main branch so we can review your work afterward.
 
 ## Prerequisites <!-- omit in toc -->
 
-We recognize how annoying it can be to have to set up an environment that doesn't exactly match your preferred defaults. The project is built with the following:
+We know setting up a new development environment isn’t always ideal. To help you get started quickly, this project uses the following tools and technologies:
 
 - [.NET 9](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
   - [CommunityToolkit.Maui](https://www.nuget.org/packages/CommunityToolkit.Maui/11.1.0)
