@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="cims_mobile_interview_skill_test.Views.LandingPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,20,30,0"
+            Spacing="0">
+
+            <Image
+                Source="dog_default.png"
+                HeightRequest="185"
+                Aspect="AspectFit" />
+
+            <Label
+                Text="Welcome to Dog Facts!"
+                Style="{StaticResource Header}"
+                HorizontalOptions="Center"
+                Margin="0,24,0,0"/>
+
+            <Label
+                Text="There are no new dog facts available at this time."
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Fill"
+                Margin="0,32,0,0"/>
+
+            <Button
+                Text="Click For More Facts"
+                HorizontalOptions="Center"
+                HeightRequest="44"
+                WidthRequest="264"
+                Margin="0,40,0,0"/>
+
+            <BoxView
+                BackgroundColor="Transparent"
+                HorizontalOptions="Fill"
+                HeightRequest="100"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
