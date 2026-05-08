@@ -11,6 +11,8 @@ public class DogFactsService : IDogFactsService
 
     private const string BASE_ADDRESS = "https://dogapi.dog/api/v2";
 
+    private const int MaxFactsPerRequest = 5;
+
     private HttpClient _httpClient = new();
 
     #endregion
@@ -23,6 +25,12 @@ public class DogFactsService : IDogFactsService
 
         _httpClient.Dispose();
 
+        _httpClient = new HttpClient
+        {
+            BaseAddress = new Uri(BASE_ADDRESS),
+            Timeout = TimeSpan.FromMilliseconds(350000)
+        }
+
         _httpClient = new();
 
         _httpClient.Timeout = TimeSpan.FromMilliseconds(350000);
@@ -33,7 +41,24 @@ public class DogFactsService : IDogFactsService
 
     #region Methods
 
+    public async Task<IReadOnlyList<string>> GetFactsAsync()
+    {
+        using var message = new HttpRequestMessage(
+            HttpMethod.Get,
+            $"facts?limit={MaxFactsPerRequest}"
+        );
 
+        var response = await RequestAsync<DogFactsResponse>(message);
+
+        if (response.Data?.data == null || response.Data.data.Count == 0)
+            return Array.Empty<string>();
+        
+        return response.Data.data
+            .Select(f => f.attributes?.body)
+            .Where(b => !string.IsNullOrWhiteSpace(b))
+            .Cast<string>()
+            .ToList();
+    }
 
     #endregion
 

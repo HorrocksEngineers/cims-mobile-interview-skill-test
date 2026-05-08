@@ -5,6 +5,6 @@ namespace cims_mobile_interview_skill_test.Interfaces;
 public interface IDogFactsService
 {
 
-
+    Task<IReadOnlyList<string>> GetFactsAsync();
 
 }
